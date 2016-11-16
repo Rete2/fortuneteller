@@ -55,7 +55,7 @@ fortunewish
 
 case
 when cats == "y" && city == "y" && living == "y"
-  puts "You will find a kitten on the street tomorrow."
+  puts "You will find cat on the street tomorrow."
 else
   puts "I'm sorry, I can't tell your fortune."
 end

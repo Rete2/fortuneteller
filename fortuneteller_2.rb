@@ -8,22 +8,14 @@ puts "Whats your name? "
 promt
 username = gets.chomp
 
-puts "Hello #{username}! Welcome"
+puts "Hello #{username}! Welcome!"
 puts "How old are you? "
 promt
 age = gets.chomp
-puts "You are #{age} years old."
+puts "So, you are #{age} years old. Great!"
 
 puts "Would you like me to tell your fortune? [y/n] "
 promt
-
-#if gets.chomp == "y"
-#  fortunewish = true
-#else
-#  fortunewish = false
-#  puts "oh, too bad!"
-#  exit
-# end
 
 def fortunewish
   case gets.chomp
@@ -41,23 +33,31 @@ end
 
 fortunewish
 
-  puts "Do you like cats? [y/n] "
+  puts "Great, lets start then! Are you employed? [y/n] "
   promt
-  cats = gets.chomp
+  employed = gets.chomp
 
-  puts "Do you live in a city? [y/n] "
+  puts "Do you like your neighbors? [y/n] "
   promt
-  city = gets.chomp
+  neighbors = gets.chomp
 
-  puts "Do you live by yourself? [y/n] "
+  puts "Do you like rain? [y/n] "
   promt
-  living = gets.chomp
+  rain = gets.chomp
 
 case
-when cats == "y" && city == "y" && living == "y"
-  puts "You will find cat on the street tomorrow."
-when cats == "y" && city == "n" && living == "n"
-  puts "Have a nice day"
+when employed == "y" && neighbors == "y" && rain == "y"
+  puts "You will have a wonderful week at work."
+when employed == "y" && neighbors == "n" && rain == "y"
+  puts "You will find a different job soon."
+when employed == "n" && neighbors == "y" && rain == "y"
+  puts "You will dance in the rain tomorrow."
+when employed == "n" && neighbors == "y" && rain == "n"
+  puts "Are you sure, you don't like rain? Dance in the rain and see what happens..."
+when employed == "n" && neighbors == "n" && rain == "n"
+  puts "You should dance in the rain with your neighbor and see what happens..."
 else
-  puts "I'm sorry, I can't tell your fortune."
+  puts "You will have new neighbors soon. Good luck!"
 end
+
+puts "Thanks for playing this game! Have a nice day!"
